@@ -30,8 +30,8 @@ winget install Cyanfish.NAPS2
 Write-Host "INSTALANDO NOTEPAD++..." -ForegroundColor White -BackgroundColor DarkGreen
 winget install Notepad++.Notepad++
 
-Write-Host "INSTALANDO PDF-XCHANGE EDITOR..." -ForegroundColor White -BackgroundColor DarkGreen
-winget install TrackerSoftware.PDF-XChangeEditor
+Write-Host "INSTALANDO PDF-XCHANGE VIEWER..." -ForegroundColor White -BackgroundColor DarkGreen
+winget install TrackerSoftware.PDF-XChangeViewer
 
 Write-Host "INSTALANDO MICROSOFT OFFICE..." -ForegroundColor White -BackgroundColor DarkGreen
 C:\Setup\Office\Setup.exe /configure C:\Setup\Office\Office2024.xml
