@@ -40,8 +40,8 @@ Pause
 Write-Host "REMOVENDO APPS DESNECESSÁRIOS ..." -ForegroundColor White -BackgroundColor DarkBlue
 winget uninstall Git.Git
 Remove-Item -Path C:\Setup\ -Force -Recurse
+cmd.exe /c "del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt""
 
-set-content -Path (Get-PSReadLineOption).HistorySavePath) -value $null
 
 
 

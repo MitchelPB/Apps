@@ -43,6 +43,7 @@ C:\Setup\Office.exe /configure C:\Setup\Office\Office2024.xml
 Write-Host "REMOVENDO APPS DESNECESSÁRIOS ..." -ForegroundColor White -BackgroundColor DarkGreen
 winget uninstall Git.Git
 Remove-Item -Path C:\Setup\ -Force -Recurse
+cmd.exe /c "del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt""
 
 
 
