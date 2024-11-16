@@ -5,11 +5,11 @@ Write-Host "INSTALANDO REQUISITOS..." -ForegroundColor White -BackgroundColor Da
 winget upgrade -r --accept-source-agreements --accept-package-agreements
 winget install Git.Git
 winget install Microsoft.Nuget
-$OfficeFile = "https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=ProPlusRetail&platform=x64&language=pt-br&version=O16GA"
-Invoke-WebRequest -Uri $OfficeFile -OutFile "C:\Setup\Office.exe"
+#$OfficeFile = "https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=ProPlusRetail&platform=x64&language=pt-br&version=O16GA"
+#Invoke-WebRequest -Uri $OfficeFile -OutFile "C:\Setup\Office.exe"
 
-#Write-Host "EFETUANDO DOWNLOAD DO INSTALADOR OFFICE" -ForegroundColor White -BackgroundColor DarkGreen
-#& 'C:\Program Files\Git\cmd\git.exe' clone https://github.com/MitchelPB/Office2024Unnatended/ c:\Setup\Office
+Write-Host "EFETUANDO DOWNLOAD DO INSTALADOR OFFICE" -ForegroundColor White -BackgroundColor DarkGreen
+& 'C:\Program Files\Git\cmd\git.exe' clone https://github.com/MitchelPB/Office2024Unnatended/ c:\Setup\Office
 
 Write-Host "INSTALANDO WINRAR" -ForegroundColor White -BackgroundColor DarkGreen
 winget install Winrar
@@ -36,7 +36,7 @@ Write-Host "INSTALANDO PDF-XCHANGE VIEWER..." -ForegroundColor White -Background
 winget install TrackerSoftware.PDF-XChangeViewer
 
 Write-Host "INSTALANDO MICROSOFT OFFICE..." -ForegroundColor White -BackgroundColor DarkGreen
-C:\Setup\Setup2016.exe /configure C:\Setup\Office2016.xml
+C:\Setup\Office2016.exe /configure C:\Setup\Office2016.xml
 
 Write-Host "REMOVENDO APPS DESNECESSÁRIOS ..." -ForegroundColor White -BackgroundColor DarkGreen
 winget uninstall Git.Git
