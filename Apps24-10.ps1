@@ -42,12 +42,7 @@ Write-Host "REMOVENDO APPS DESNECESSÁRIOS ..." -ForegroundColor White -Backgrou
 winget uninstall Git.Git
 Remove-Item -Path C:\Setup\ -Force -Recurse
 
-Write-Host "INSTALANDO ATUALIZAÇÕES DO WINDOWS..." -ForegroundColor White -BackgroundColor DarkGreen
-Install-Module -name PSWindowsUpdate -force
-Import-Module PSWindowsUpdate
-Set-ExecutionPolicy RemoteSigned
-Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -Install -AutoRebootY
-Write-Host "REINICIANDO O WINDOWS..." -ForegroundColor White -BackgroundColor DarkGreen
-shutdown -r -t 0
+
+
 
 
