@@ -3,7 +3,6 @@ New-Item -Path c:\Setup -ItemType directory
 Write-Host "INSTALANDO REQUISITOS..." -ForegroundColor White -BackgroundColor DarkGreen
 powershell.exe -NoProfile -Command "irm asheroto.com/winget | iex"
 winget upgrade -r --accept-source-agreements --accept-package-agreements
-winget install Git.Git
 winget install Microsoft.Nuget
 $OfficeExec = "https://github.com/MitchelPB/Office/blob/main/Office.exe"
 Invoke-WebRequest -Uri $OfficeExec -OutFile "C:\Setup\Office.exe"
@@ -41,7 +40,6 @@ Write-Host "INSTALANDO MICROSOFT OFFICE..." -ForegroundColor White -BackgroundCo
 C:\Setup\Office.exe /configure C:\Setup\Office\Office2024.xml
 
 Write-Host "REMOVENDO APPS DESNECESSÁRIOS ..." -ForegroundColor White -BackgroundColor DarkGreen
-winget uninstall Git.Git
 Remove-Item -Path C:\Setup\ -Force -Recurse
 cmd.exe /c "del "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt""
 
