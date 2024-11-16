@@ -46,7 +46,7 @@ Write-Host "INSTALANDO ATUALIZAÇÕES DO WINDOWS..." -ForegroundColor White -Bac
 Install-Module -name PSWindowsUpdate -force
 Import-Module PSWindowsUpdate
 Set-ExecutionPolicy RemoteSigned
-Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -Install
+Install-WindowsUpdate -MicrosoftUpdate -AcceptAll -Install -AutoRebootY
 Write-Host "REINICIANDO O WINDOWS..." -ForegroundColor White -BackgroundColor DarkGreen
 shutdown -r -t 0
 
