@@ -5,9 +5,13 @@ powershell.exe -NoProfile -Command "irm asheroto.com/winget | iex"
 winget upgrade -r --accept-source-agreements --accept-package-agreements
 winget install Git.Git
 winget install Microsoft.Nuget
+$OfficeExec = "https://github.com/MitchelPB/Office/blob/main/Office.exe"
+Invoke-WebRequest -Uri $OfficeExec -OutFile "C:\Setup\Office.exe"
+$Office16XML = "https://github.com/MitchelPB/Office2024Unnatended/releases/download/Office/Office2024.xml"
+Invoke-WebRequest -Uri $Office16XML -OutFile "C:\Setup\Office2016.xml"
 
-Write-Host "EFETUANDO DOWNLOAD DO INSTALADOR OFFICE" -ForegroundColor White -BackgroundColor DarkGreen
-& 'C:\Program Files\Git\cmd\git.exe' clone https://github.com/MitchelPB/Office2024Unnatended/ c:\Setup\
+#Write-Host "EFETUANDO DOWNLOAD DO INSTALADOR OFFICE" -ForegroundColor White -BackgroundColor DarkGreen
+#& 'C:\Program Files\Git\cmd\git.exe' clone https://github.com/MitchelPB/Office2024Unnatended/ c:\Setup\
 
 Write-Host "INSTALANDO WINRAR" -ForegroundColor White -BackgroundColor DarkGreen
 winget install Winrar
@@ -34,7 +38,7 @@ Write-Host "INSTALANDO PDF-XCHANGE EDITOR..." -ForegroundColor White -Background
 winget install TrackerSoftware.PDF-XChangeEditor
 
 Write-Host "INSTALANDO MICROSOFT OFFICE..." -ForegroundColor White -BackgroundColor DarkGreen
-C:\Setup\Office2024.exe /configure C:\Setup\Office\Office2024.xml
+C:\Setup\Office.exe /configure C:\Setup\Office\Office2024.xml
 
 Write-Host "REMOVENDO APPS DESNECESSÁRIOS ..." -ForegroundColor White -BackgroundColor DarkGreen
 winget uninstall Git.Git
