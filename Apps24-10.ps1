@@ -1,7 +1,7 @@
 New-Item -Path c:\Setup -ItemType directory
 
 Write-Host "INSTALANDO REQUISITOS..." -ForegroundColor White -BackgroundColor DarkGreen
-powershell.exe -NoProfile -Command "irm asheroto.com/winget | iex"
+#powershell.exe -NoProfile -Command "irm asheroto.com/winget | iex"
 winget upgrade -r --accept-source-agreements --accept-package-agreements
 winget install Git.Git
 winget install Microsoft.Nuget
