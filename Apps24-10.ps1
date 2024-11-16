@@ -9,7 +9,7 @@ winget install Microsoft.Nuget
 #Invoke-WebRequest -Uri $OfficeFile -OutFile "C:\Setup\Office.exe"
 
 Write-Host "EFETUANDO DOWNLOAD DO INSTALADOR OFFICE" -ForegroundColor White -BackgroundColor DarkGreen
-& 'C:\Program Files\Git\cmd\git.exe' clone https://github.com/MitchelPB/Office2024Unnatended/ c:\Setup\Office
+& 'C:\Program Files\Git\cmd\git.exe' clone https://github.com/MitchelPB/Office2024Unnatended/ c:\Setup\
 
 Write-Host "INSTALANDO WINRAR" -ForegroundColor White -BackgroundColor DarkGreen
 winget install Winrar
