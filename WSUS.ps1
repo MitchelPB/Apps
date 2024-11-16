@@ -1,5 +1,5 @@
 Write-Host "INSTALANDO ATUALIZAÇÕES DO WINDOWS..." -ForegroundColor White -BackgroundColor DarkGreen
-winget install Nuget
+winget install Microsoft.Nuget
 Install-Module -name PSWindowsUpdate -force
 Import-Module PSWindowsUpdate
 Set-ExecutionPolicy RemoteSigned
